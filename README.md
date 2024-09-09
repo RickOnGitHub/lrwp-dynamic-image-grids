@@ -1,2 +1,2 @@
-# lrwp-dynamic-image-grids
+# Dynamic Image Grids
 Laurens &amp; Rick Dynamic Image Grids
