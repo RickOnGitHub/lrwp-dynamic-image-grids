@@ -57,7 +57,7 @@ require plugin_dir_path(__FILE__) . 'includes/lrwp-main.php';
  */
 function lrwp_start_plugin()
 {
-    $plugin = new LRWP_Main();
+    $plugin = new LRWP_Main('Dynamic Image Grids', LRWP_VERSION);
     $plugin->start();
 }
 lrwp_start_plugin();
