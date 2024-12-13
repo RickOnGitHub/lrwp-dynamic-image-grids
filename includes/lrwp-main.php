@@ -35,9 +35,6 @@ class LRWP_Main
 
         // Load the admin menu via an add_action hook
         add_action('admin_menu', array($admin, 'load_admin_menu'));
-
-        // Load the settings via an add_action hook
-        add_action('admin_init', array($admin, 'lrwp_main_settings'));
     }
 
     private function load_public()
