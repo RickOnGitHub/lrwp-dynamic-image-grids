@@ -27,64 +27,13 @@ class LRWP_Admin
     public function load_admin_menu()
     {
         add_menu_page(
-            'LRWP Admin',
-            'LRWP Admin',
+            'LRWP Dynamic Image Grids',
+            'LRWP Dynamic Image Grids',
             'manage_options',
-            'lrwp-admin',
+            'lrwp-dynamic-image-grids',
             array($this, 'load_main_settings_view'),
-            'dashicons-admin-generic',
-            6
+            'dashicons-images-alt',
+            65
         );
-    }
-
-    // Set up the settings_fields('lrwp_main_settings');
-    public function lrwp_main_settings()
-    {
-        // Register the settings
-        register_setting('lrwp_main_settings', 'lrwp_main_settings');
-
-        // Add the settings section
-        add_settings_section(
-            'lrwp_main_settings',
-            'Main Settings',
-            array($this, 'lrwp_main_settings_callback'),
-            'lrwp_main_settings'
-        );
-
-        // Add the setting field
-        add_settings_field(
-            'lrwp_main_setting_1',
-            'Setting 1',
-            array($this, 'lrwp_main_setting_1_callback'),
-            'lrwp_main_settings',
-            'lrwp_main_settings'
-        );
-
-        // Add the setting field
-        add_settings_field(
-            'lrwp_main_setting_2',
-            'Setting 2',
-            array($this, 'lrwp_main_setting_2_callback'),
-            'lrwp_main_settings',
-            'lrwp_main_settings'
-        );
-    }
-
-    // Just an example callback
-    public function lrwp_main_settings_callback()
-    {
-        echo 'This is the main settings section.';
-    }
-
-    // Example setting 1
-    public function lrwp_main_setting_1_callback()
-    {
-        echo '<input type="text" name="lrwp_main_settings[lrwp_main_setting_1]" value="' . esc_attr(get_option('lrwp_main_settings')['lrwp_main_setting_1']) . '" />';
-    }
-
-    // Example setting 2
-    public function lrwp_main_setting_2_callback()
-    {
-        echo '<input type="text" name="lrwp_main_settings[lrwp_main_setting_2]" value="' . esc_attr(get_option('lrwp_main_settings')['lrwp_main_setting_2']) . '" />';
     }
 }
